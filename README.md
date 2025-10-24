@@ -53,18 +53,17 @@ This repository contains MATLAB scripts and functions for processing microscopy 
 -  This code was built on macOS (maca64) and tested using MATLAB R2024b 
 
 # Installation/Use
-1.  Clone the processDS repository to MATLAB Drive
+1.  Clone the GHprobes repository to MATLAB Drive
 2. Open the example live script (ImageProcessingExample.mlx) and load the example workspace (ImageProcessingExample.mat)
 3. Run the live script to analyze the example images in the data folder OR replace them with your own max projection images.
 4. To optionally merge image acquisition information with your final results table, ensure each image file is named correctly. For the following example, the info in bold will be used to categorize images based on magnification, exposure time, and shutter speed.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAX\_**20X**r2\_WT\_0.4uM ruby\_75um**\_400ms\_**1Xgain**\_1shut\_**062\_crop.nd2 \- C=0.tif
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAX\_**20X**r2\_WT\_0.4uM ruby\_75um\_**400ms**\_1Xgain\_**1shut**\_062\_crop.nd2 \- C=0.tif
 
 # Repository Structure
 1.  code                    % MATLAB scripts and functions, example workspace files
 2. data                     % Example input images
 3. results                 % Output quantification tables and saved image outputs
-4. README.md
 
 # Functions
 ### Thresholding images with Otsu's Method
@@ -225,8 +224,8 @@ end
 Example input images are in DataDir and results will be stored in ResultsDir
 
 ```matlab
-DataDir = '../processDS/data';
-ResultsDir = '../processDS/results';
+DataDir = '../GHprobes/data';
+ResultsDir = '../GHprobes/results';
 ```
 
 ### Create an ImageDatastore from the image directory. Subfolders within the directory will be used as labels for subsequent analysis (Ex: mRuby3 vs mRuby3 BT0996 E240A)
